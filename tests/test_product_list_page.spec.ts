@@ -15,10 +15,10 @@ test('check functionality of all add to cart and remove buttons on product list 
     await homePage.goto();
     await homePage.login();
 
-    // Add all six products to the cart. Built in validation for the Remove button appearing.
+    // Add all six products to the cart. Built-in validation for the Remove button appearing.
     await listPage.addProductToCartByIndex(products);
 
-    // Remove all six products from cart. Built in validation for the Add to cart button appearing.
+    // Remove all six products from cart. Built-in validation for the Add to cart button appearing.
     await listPage.removeProductFromCartByIndex(products)
 });
 
@@ -37,9 +37,9 @@ test('negative test functionality of add to cart and remove buttons on product l
     await homePage.goto();
     await homePage.login('performance_glitch_user');
 
-    // Add all six products to the cart. Built in validation for the Remove button appearing.
+    // Add all six products to the cart. Built-in validation for the Remove button appearing.
     await listPage.addProductToCartByIndex(products);
 
-    // Remove all six products from cart. Built in validation for the Add to cart button appearing.
+    // Remove all six products from cart. Built-in validation for the Add to cart button appearing.
     await listPage.removeProductFromCartByIndex(products)
 });

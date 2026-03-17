@@ -77,10 +77,11 @@ test('checkout with multiple products', async ({ page }) => {
     await homePage.login();
 
     // Add multiple products to the cart by index
-    await listPage.addProductToCartByIndex([3,5]);
+    const randomIndices = Math.random() < 0.5 ? [0,2,4] : [1,3,5];
+    await listPage.addProductToCartByIndex(randomIndices);
 
-    // Verify the cart amount indicator shows 2 items, go to the cart and proceed to checkout
-    await cartPage.checkCartAmount(2);
+    // Verify the cart amount indicator shows the correct number of items, go to the cart and proceed to checkout
+    await cartPage.checkCartAmount(randomIndices.length);
     await cartPage.goToCart();
     await cartPage.goToCheckout();
 

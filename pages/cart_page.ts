@@ -22,12 +22,7 @@ export class CartPage {
     
     // Check the cart amount indicator, with error handling for when the badge does not appear
     async checkCartAmount(expectedAmount: number = 1) {
-        try {
-            await expect(this.cartAmountIndicator).toHaveText(expectedAmount.toString());
-        } catch (error) {
-            console.error("Cart amount indicator not found or does not match expected value.");
-            throw error;
-        }
+        await expect(this.cartAmountIndicator, "Cart amount indicator does match expected value.").toHaveText(expectedAmount.toString(),);
     }
 
     // Navigate to the checkout page

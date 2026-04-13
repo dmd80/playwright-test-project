@@ -31,10 +31,12 @@ export class HomePage {
     this.loginButton = page.getByRole('button', { name: 'Login' });
   }
 
+  // Method to navigate to the home page of the saucedemo website. This is typically the first step in any test that interacts with the site.
   async goto() {
-    await this.page.goto('https://www.saucedemo.com/');
+    await this.page.goto('/');
   }
 
+  // Login method that accepts a user type to log in with different credentials. Defaults to 'standard_user'.
   async login(user: string = 'standard_user') {
     let username: string;
     let password: string;

@@ -32,9 +32,9 @@ export class ProductPage {
 
     // Verify that the product details are displayed correctly, including the product name, description, price, and add to cart button
     async verifyProductDetails() {
-        await expect(this.productItemName).toBeVisible();
-        await expect(this.productDescription).toBeVisible();
-        await expect(this.productPrice).toBeVisible();
-        await expect(this.addToCartButton).toBeVisible();
+        await expect.soft(this.productItemName).toBeVisible();
+        await expect.soft(this.productDescription).toBeVisible();
+        await expect.soft(this.productPrice).toBeVisible();
+        await expect.soft(this.addToCartButton).toBeVisible();
     }
 }

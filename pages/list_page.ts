@@ -12,7 +12,7 @@ export class ListPage {
 
     constructor(page: Page) {
         this.productItem = page.locator('.inventory_item');
-        this.productName = page.locator('inventory_item_name');
+        this.productName = page.locator('.inventory_item_name');
         this.addToCartButton = page.getByRole('button', { name: 'Add to cart' });
         this.removeFromCartButton = page.getByRole('button', { name: 'Remove' });
     }

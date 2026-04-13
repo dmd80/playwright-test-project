@@ -10,14 +10,13 @@ export class HomePage {
   readonly passwordInput: Locator;
   readonly loginButton: Locator;
 
-  // Predefined login credentials for testing purposes. Normally these would be stored securely and not hardcoded.
-  readonly standardUser: string = 'standard_user';
-  readonly lockedOutUser: string = 'locked_out_user';
-  readonly problemUser: string = 'problem_user';
-  readonly performanceGlitchUser: string = 'performance_glitch_user';
-  readonly error_user: string = 'error_user';
-  readonly visual_user: string = 'visual_user';
-  readonly password: string = 'secret_sauce';
+  readonly standardUser: string = process.env.SAUCEDEMO_USER || 'standard_user';
+  readonly lockedOutUser: string = process.env.SAUCEDEMO_LOCKED_USER || 'locked_out_user';
+  readonly problemUser: string = process.env.SAUCEDEMO_PROBLEM_USER || 'problem_user';
+  readonly performanceGlitchUser: string = process.env.SAUCEDEMO_GLITCH_USER || 'performance_glitch_user';
+  readonly error_user: string = process.env.SAUCEDEMO_ERROR_USER || 'error_user';
+  readonly visual_user: string = process.env.SAUCEDEMO_VISUAL_USER || 'visual_user';
+  readonly password: string = process.env.SAUCEDEMO_PASSWORD || 'secret_sauce';
 
 
   constructor(page: Page) {

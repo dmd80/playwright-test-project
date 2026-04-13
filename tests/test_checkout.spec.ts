@@ -13,7 +13,7 @@ test('checkout process', async ({ page }) => {
     const checkoutPage = new CheckoutPage(page);
 
     // Go to the home page and log in
-    await homePage.goto();
+    await page.goto('/');
     await homePage.login();
 
     // Add a product to the cart by index
@@ -42,7 +42,7 @@ test('checkout with a specific product', async ({ page }) => {
     const productName = "Sauce Labs Fleece Jacket"
 
     // Go to the home page and log in
-    await homePage.goto();
+    await page.goto('/');
     await homePage.login();
 
     // Select a specific product by name
@@ -73,7 +73,7 @@ test('checkout with multiple products', async ({ page }) => {
     const checkoutPage = new CheckoutPage(page);
 
     // Go to the home page and log in
-    await homePage.goto();
+    await page.goto('/');
     await homePage.login();
 
     // Add multiple products to the cart by index

@@ -12,6 +12,7 @@
     "@faker-js/faker": "^10.3.0",
     "@playwright/test": "^1.58.2",
     "@types/node": "^25.6.0",
-    "dotenv": "^17.4.2"
+    "dotenv": "^17.4.2",
+    "eslint-plugin-playwright": "^2.10.1"
   }
 }

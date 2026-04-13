@@ -12,7 +12,7 @@ test('check functionality of all add to cart and remove buttons on product list 
     const products = [0,1,2,3,4,5]
 
     // Go to the home page and log in
-    await homePage.goto();
+    await page.goto('/');
     await homePage.login();
 
     // Add all six products to the cart. Built-in validation for the Remove button appearing.
@@ -34,7 +34,7 @@ test('negative test functionality of add to cart and remove buttons on product l
     const products = [0,1,2,3,4,5]
 
     // Go to the home page and log in
-    await homePage.goto();
+    await page.goto('/');
     await homePage.login('performance_glitch_user');
 
     // Add all six products to the cart. Built-in validation for the Remove button appearing.

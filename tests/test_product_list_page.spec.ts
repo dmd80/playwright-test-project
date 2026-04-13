@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
-import { HomePage } from '../pages/home_page.js';
-import { ListPage } from '../pages/list_page.js';
+import { HomePage } from '../pages/home_page.ts';
+import { ListPage } from '../pages/list_page.ts';
 
 /**
  * Test the functionality of all add to cart and remove buttons on the product list page, by adding all products to the cart and then removing them, 

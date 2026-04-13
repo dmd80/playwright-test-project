@@ -22,7 +22,7 @@ export class CartPage {
     
     // Check the cart amount indicator, with error handling for when the badge does not appear
     async checkCartAmount(expectedAmount: number = 1) {
-        await expect(this.cartAmountIndicator, "Cart amount indicator does match expected value.").toHaveText(expectedAmount.toString(),);
+        await expect.soft(this.cartAmountIndicator, "Cart amount indicator does match expected value.").toHaveText(expectedAmount.toString(),);
     }
 
     // Navigate to the checkout page

@@ -28,21 +28,21 @@ Your Playwright project tests against **saucedemo.com** with the following struc
 
 ### Configuration
 - Test directory: `./tests`
+- baseURL: `https://www.saucedemo.com/`
 - Reporter: HTML
 - Browsers: Chromium, Firefox, Webkit
 - Trace: on-first-retry
 - Test ID attribute: `data-test`
+- TypeScript strict mode: enabled
+- ESLint: configured with eslint-plugin-playwright
 
 ## Known Issues / Areas for Improvement
 
 Based on codebase analysis and 2026 best practices:
 
-1. **Hardcoded credentials** in `home_page.ts` - security concern
-2. **No baseURL** configured - tests hit URL directly
-3. **No webServer** - depends on external site
-4. **Missing ESLint** for Playwright patterns
-5. **No TypeScript strict mode**
-6. **Test isolation** - shares state with saucedemo.com
+1. **Credentials with defaults** in `home_page.ts` - uses env vars with fallback defaults (saucedemo has them publicly listed, but pure env vars preferred)
+2. **No webServer** - depends on external saucedemo.com (intentional for demo testing)
+3. **Test isolation** - shares state with saucedemo.com (inherent to external demo site)
 
 ## QA Best Practices (2026)
 
@@ -145,7 +145,7 @@ npx playwright show-trace trace.zip
 
 ### Lint
 ```bash
-npm install -D eslint-plugin-playwright
+npm run lint
 ```
 
 ## References
@@ -162,4 +162,4 @@ When providing feedback, reference:
 - Concrete fix recommendation
 - Priority level (critical/high/medium/low)
 
-Base directory for this skill: file:///home/ded/playwright-project/.claude/skills/qa-code-reviewer
+Base directory for this skill: file:///home/ded/playwright-project

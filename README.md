@@ -1,4 +1,4 @@
-Hello. This project is just a means to refresh old skills, but also familiarize myself with Playwright and any tools used along the way.
+Hello. This project is a means to refresh old skills, but also familiarize myself with new ones such as Playwright and AI.
 
 The website used for testing is: https://www.saucedemo.com/.
 

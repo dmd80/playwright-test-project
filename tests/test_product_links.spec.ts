@@ -26,7 +26,7 @@ test.describe('Product Link Validation', () => {
         const listPage = new ListPage(page);
         const productPage = new ProductPage(page);
 
-        await page.goto('/');
+        await homePage.goto();
         await homePage.login();
 
         for (const productName of PRODUCTS) {

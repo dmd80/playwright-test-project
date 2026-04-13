@@ -13,7 +13,7 @@ test('checkout process', async ({ page }) => {
     const checkoutPage = new CheckoutPage(page);
 
     // Go to the home page and log in
-    await page.goto('/');
+    await homePage.goto();
     await homePage.login();
 
     // Add a product to the cart by index
@@ -29,7 +29,7 @@ test('checkout process', async ({ page }) => {
     await checkoutPage.finishCheckout();
 
     // Verify that the confirmation message is visible after checkout
-    await expect(checkoutPage.confirmationMessage).toBeVisible();
+    await expect.soft(checkoutPage.confirmationMessage).toBeVisible();
 });
 
 // Additional test to cover checkout with multiple products, and to ensure the cart amount indicator is working correctly with multiple items.
@@ -42,14 +42,14 @@ test('checkout with a specific product', async ({ page }) => {
     const productName = "Sauce Labs Fleece Jacket"
 
     // Go to the home page and log in
-    await page.goto('/');
+    await homePage.goto();
     await homePage.login();
 
     // Select a specific product by name
     await listPage.selectProductByName(productName);
     
     // Verify the product page shows the correct product, and add it to the cart
-    await expect(productPage.productItemName).toHaveText(productName);
+    await expect.soft(productPage.productItemName).toHaveText(productName);
     await productPage.addToCart();
 
     // Verify the cart amount indicator shows 1 item, go to the cart and proceed to checkout
@@ -62,7 +62,7 @@ test('checkout with a specific product', async ({ page }) => {
     await checkoutPage.finishCheckout();
 
     // Verify that the confirmation message is visible after checkout
-    await expect(checkoutPage.confirmationMessage).toBeVisible();
+    await expect.soft(checkoutPage.confirmationMessage).toBeVisible();
 });
 
 // Test the checkout process with multiple products added to the cart, and verify that the cart amount indicator shows the correct number of items before proceeding to checkout.
@@ -73,7 +73,7 @@ test('checkout with multiple products', async ({ page }) => {
     const checkoutPage = new CheckoutPage(page);
 
     // Go to the home page and log in
-    await page.goto('/');
+    await homePage.goto();
     await homePage.login();
 
     // Add multiple products to the cart by index
@@ -90,5 +90,5 @@ test('checkout with multiple products', async ({ page }) => {
     await checkoutPage.finishCheckout();
 
     // Verify that the confirmation message is visible after checkout
-    await expect(checkoutPage.confirmationMessage).toBeVisible();
+    await expect.soft(checkoutPage.confirmationMessage).toBeVisible();
 });

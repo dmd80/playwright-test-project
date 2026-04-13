@@ -34,7 +34,7 @@ export class ProductPage {
     async verifyProductDetails() {
         await expect.soft(this.productItemName).toBeVisible();
         await expect.soft(this.productDescription).toBeVisible();
-        await expect(this.productPrice).toBeVisible();
-        await expect(this.addToCartButton).toBeVisible();
+        await expect.soft(this.productPrice).toBeVisible();
+        await expect.soft(this.addToCartButton).toBeVisible();
     }
 }

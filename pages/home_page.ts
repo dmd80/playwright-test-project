@@ -10,6 +10,11 @@ export class HomePage {
   readonly passwordInput: Locator;
   readonly loginButton: Locator;
 
+  /**
+   * User credentials. Can be set via environment variables or default to known values. 
+   * Normally these are kept secret as environment variables, but since the demo site 
+   * lists these credentials publicly it's safe to include them here for testing purposes.
+   */
   readonly standardUser: string = process.env.SAUCEDEMO_USER || 'standard_user';
   readonly lockedOutUser: string = process.env.SAUCEDEMO_LOCKED_USER || 'locked_out_user';
   readonly problemUser: string = process.env.SAUCEDEMO_PROBLEM_USER || 'problem_user';

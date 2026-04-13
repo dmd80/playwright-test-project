@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../pages/home_page';
-import { ListPage } from '../pages/list_page';
-import { CartPage } from '../pages/cart_page';
-import { CheckoutPage } from '../pages/checkout_page';
-import { ProductPage } from '../pages/product_page';
+import { HomePage } from '../pages/home_page.js';
+import { ListPage } from '../pages/list_page.js';
+import { CartPage } from '../pages/cart_page.js';
+import { CheckoutPage } from '../pages/checkout_page.js';
+import { ProductPage } from '../pages/product_page.js';
 
 // Test the checkout process with a single product added to the cart, and verify that the cart amount indicator shows the correct number of items before proceeding to checkout.
 test('checkout process', async ({ page }) => {

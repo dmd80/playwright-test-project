@@ -1,7 +1,7 @@
-import test from '@playwright/test';
-import { HomePage } from '../pages/home_page';
-import { ListPage } from '../pages/list_page';
-import { ProductPage } from '../pages/product_page';
+import { test } from '@playwright/test';
+import { HomePage } from '../pages/home_page.js';
+import { ListPage } from '../pages/list_page.js';
+import { ProductPage } from '../pages/product_page.js';
 
 const PRODUCTS = [
     'Sauce Labs Backpack',

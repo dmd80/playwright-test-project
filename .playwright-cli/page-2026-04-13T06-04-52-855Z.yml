@@ -1,0 +1,30 @@
+- generic [ref=e532]:
+  - generic [ref=e533]:
+    - generic [ref=e534]:
+      - generic [ref=e535]:
+        - generic [ref=e536]:
+          - button "Open Menu" [ref=e537] [cursor=pointer]
+          - img "Open Menu" [ref=e538]
+        - generic [ref=e540]: Swag Labs
+      - button "Go back Back to products" [ref=e545] [cursor=pointer]:
+        - img "Go back" [ref=e546]
+        - text: Back to products
+    - generic [ref=e549]:
+      - img "Sauce Labs Fleece Jacket" [ref=e551]
+      - generic [ref=e552]:
+        - generic [ref=e553]: Sauce Labs Fleece Jacket
+        - generic [ref=e554]: It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.
+        - generic [ref=e555]: $49.99
+        - button "Add to cart" [ref=e556] [cursor=pointer]
+  - contentinfo [ref=e557]:
+    - list [ref=e558]:
+      - listitem [ref=e559]:
+        - link "Twitter" [ref=e560] [cursor=pointer]:
+          - /url: https://twitter.com/saucelabs
+      - listitem [ref=e561]:
+        - link "Facebook" [ref=e562] [cursor=pointer]:
+          - /url: https://www.facebook.com/saucelabs
+      - listitem [ref=e563]:
+        - link "LinkedIn" [ref=e564] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/sauce-labs/
+    - generic [ref=e565]: © 2026 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy

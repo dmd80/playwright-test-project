@@ -1,0 +1,30 @@
+- generic [ref=e404]:
+  - generic [ref=e405]:
+    - generic [ref=e406]:
+      - generic [ref=e407]:
+        - generic [ref=e408]:
+          - button "Open Menu" [ref=e409] [cursor=pointer]
+          - img "Open Menu" [ref=e410]
+        - generic [ref=e412]: Swag Labs
+      - button "Go back Back to products" [ref=e417] [cursor=pointer]:
+        - img "Go back" [ref=e418]
+        - text: Back to products
+    - generic [ref=e421]:
+      - img "Sauce Labs Onesie" [ref=e423]
+      - generic [ref=e424]:
+        - generic [ref=e425]: Sauce Labs Onesie
+        - generic [ref=e426]: Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.
+        - generic [ref=e427]: $7.99
+        - button "Add to cart" [ref=e428] [cursor=pointer]
+  - contentinfo [ref=e429]:
+    - list [ref=e430]:
+      - listitem [ref=e431]:
+        - link "Twitter" [ref=e432] [cursor=pointer]:
+          - /url: https://twitter.com/saucelabs
+      - listitem [ref=e433]:
+        - link "Facebook" [ref=e434] [cursor=pointer]:
+          - /url: https://www.facebook.com/saucelabs
+      - listitem [ref=e435]:
+        - link "LinkedIn" [ref=e436] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/sauce-labs/
+    - generic [ref=e437]: © 2026 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy

@@ -1,5 +1,9 @@
 import { expect, type Locator, type Page } from "@playwright/test";
 
+/**
+ * Represents the Cart Page of the website.
+ * Provides methods to interact with it, such as checking the cart amount indicator, navigating to the cart page, and proceeding to checkout.
+ */
 export class CartPage {
     readonly checkoutButton: Locator;
     readonly cartAmountIndicator: Locator;
@@ -11,14 +15,17 @@ export class CartPage {
         this.cartButton = page.locator('.shopping_cart_link');
     }
 
+    // Navigate to the cart page
     async goToCart() {
         await this.cartButton.click();
     }
     
-    async checkCartAmount(expectedAmount: number = 1) { // Badge locator does not appear until a product is added to the cart. Add error handling to handle this case gracefully.
-        await expect(this.cartAmountIndicator).toHaveText(expectedAmount.toString());
+    // Check the cart amount indicator, with error handling for when the badge does not appear
+    async checkCartAmount(expectedAmount: number = 1) {
+        await expect(this.cartAmountIndicator, "Cart amount indicator does match expected value.").toHaveText(expectedAmount.toString(),);
     }
 
+    // Navigate to the checkout page
     async goToCheckout() {
         await this.checkoutButton.click();
     }

@@ -5,7 +5,7 @@ import { CartPage } from '../pages/cart_page';
 import { CheckoutPage } from '../pages/checkout_page';
 import { ProductPage } from '../pages/product_page';
 
-
+// Test the checkout process with a single product added to the cart, and verify that the cart amount indicator shows the correct number of items before proceeding to checkout.
 test('checkout process', async ({ page }) => {
     const homePage = new HomePage(page);
     const listPage = new ListPage(page);
@@ -32,6 +32,7 @@ test('checkout process', async ({ page }) => {
     await expect(checkoutPage.confirmationMessage).toBeVisible();
 });
 
+// Additional test to cover checkout with multiple products, and to ensure the cart amount indicator is working correctly with multiple items.
 test('checkout with a specific product', async ({ page }) => {
     const homePage = new HomePage(page);
     const listPage = new ListPage(page);
@@ -64,6 +65,7 @@ test('checkout with a specific product', async ({ page }) => {
     await expect(checkoutPage.confirmationMessage).toBeVisible();
 });
 
+// Test the checkout process with multiple products added to the cart, and verify that the cart amount indicator shows the correct number of items before proceeding to checkout.
 test('checkout with multiple products', async ({ page }) => {
     const homePage = new HomePage(page);
     const listPage = new ListPage(page);
@@ -75,11 +77,11 @@ test('checkout with multiple products', async ({ page }) => {
     await homePage.login();
 
     // Add multiple products to the cart by index
-    await listPage.addProductToCartByIndex(3);
-    await listPage.addProductToCartByIndex(5);
+    const randomIndices = Math.random() < 0.5 ? [0,2,4] : [1,3,5];
+    await listPage.addProductToCartByIndex(randomIndices);
 
-    // Verify the cart amount indicator shows 2 items, go to the cart and proceed to checkout
-    await cartPage.checkCartAmount(2);
+    // Verify the cart amount indicator shows the correct number of items, go to the cart and proceed to checkout
+    await cartPage.checkCartAmount(randomIndices.length);
     await cartPage.goToCart();
     await cartPage.goToCheckout();
 

@@ -1,0 +1,30 @@
+- generic [ref=e804]:
+  - generic [ref=e805]:
+    - generic [ref=e806]:
+      - generic [ref=e807]:
+        - generic [ref=e808]:
+          - button "Open Menu" [ref=e809] [cursor=pointer]
+          - img "Open Menu" [ref=e810]
+        - generic [ref=e812]: Swag Labs
+      - button "Go back Back to products" [ref=e817] [cursor=pointer]:
+        - img "Go back" [ref=e818]
+        - text: Back to products
+    - generic [ref=e821]:
+      - img "Test.allTheThings() T-Shirt (Red)" [ref=e823]
+      - generic [ref=e824]:
+        - generic [ref=e825]: Test.allTheThings() T-Shirt (Red)
+        - generic [ref=e826]: This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.
+        - generic [ref=e827]: $15.99
+        - button "Add to cart" [ref=e828] [cursor=pointer]
+  - contentinfo [ref=e829]:
+    - list [ref=e830]:
+      - listitem [ref=e831]:
+        - link "Twitter" [ref=e832] [cursor=pointer]:
+          - /url: https://twitter.com/saucelabs
+      - listitem [ref=e833]:
+        - link "Facebook" [ref=e834] [cursor=pointer]:
+          - /url: https://www.facebook.com/saucelabs
+      - listitem [ref=e835]:
+        - link "LinkedIn" [ref=e836] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/sauce-labs/
+    - generic [ref=e837]: © 2026 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy

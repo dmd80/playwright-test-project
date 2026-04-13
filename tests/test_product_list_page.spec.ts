@@ -9,7 +9,7 @@ import { ListPage } from '../pages/list_page';
 test('check functionality of all add to cart and remove buttons on product list page', async ({ page }) => {
     const homePage = new HomePage(page);
     const listPage = new ListPage(page);
-    const products = [1,2,3,4,5,6]
+    const products = [0,1,2,3,4,5]
 
     // Go to the home page and log in
     await homePage.goto();
@@ -31,7 +31,7 @@ test('check functionality of all add to cart and remove buttons on product list 
 test('negative test functionality of add to cart and remove buttons on product list page', async ({ page }) => {
     const homePage = new HomePage(page);
     const listPage = new ListPage(page);
-    const products = [1,2,3,4,5,6]
+    const products = [0,1,2,3,4,5]
 
     // Go to the home page and log in
     await homePage.goto();
